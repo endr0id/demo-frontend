@@ -46,6 +46,7 @@ export default function Login () {
                         <Field>
                             <Label className="text-sm/6 font-medium text-white">Password</Label>
                             <Input
+                              type="password"
                               {...register("password")}
                               className={clsx(
                                 'mt-3 block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
