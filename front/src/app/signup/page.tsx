@@ -10,7 +10,7 @@ type FormInputs = {
     password: string
 }
 
-export default function Login () {
+export default function SignUp () {
     const {
         register,
         handleSubmit
