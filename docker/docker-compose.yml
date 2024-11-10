@@ -1,5 +1,5 @@
 services:
-  mysql:
+  db:
     image: mysql:8.0.39
     container_name: demo_db
     ports:
