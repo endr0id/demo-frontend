@@ -83,6 +83,16 @@ export default function SignUp () {
                             />
                         </Field>
                         <Field>
+                            <Label className="text-sm/6 font-medium text-white">確認用パスワード</Label>
+                            <Input
+                              type="password"
+                              className={clsx(
+                                'mt-3 block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
+                                'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
+                              )}
+                            />
+                        </Field>
+                        <Field>
                             <Button type="submit" className="w-full rounded bg-green-600 py-2 px-4 text-sm text-white data-[hover]:bg-green-500 data-[active]:bg-green-700">
                                 Sign Up
                             </Button>
