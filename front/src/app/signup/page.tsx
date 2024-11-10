@@ -2,6 +2,7 @@
 
 import { Button, Field, Fieldset, Input, Label, Legend } from "@headlessui/react";
 import clsx from "clsx";
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type FormInputs = {
@@ -13,6 +14,7 @@ type FormInputs = {
 }
 
 export default function SignUp () {
+    const [isDisabled, setIsDisabled] = useState(true)
     const {
         register,
         handleSubmit
@@ -93,7 +95,15 @@ export default function SignUp () {
                             />
                         </Field>
                         <Field>
-                            <Button type="submit" className="w-full rounded bg-green-600 py-2 px-4 text-sm text-white data-[hover]:bg-green-500 data-[active]:bg-green-700">
+                            <Button
+                              type="submit"
+                              disabled={isDisabled}
+                              className={clsx(
+                                "w-full rounded py-2 px-4 text-sm text-white",
+                                "bg-green-600 data-[hover]:bg-green-500 data-[active]:bg-green-700",
+                                "disabled:bg-gray-500 disabled:text-gray-300 disabled:cursor-not-allowed disabled:pointer-events-none"
+                              )}
+                            >
                                 Sign Up
                             </Button>
                         </Field>
